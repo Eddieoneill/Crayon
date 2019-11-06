@@ -31,11 +31,25 @@ class CrayonColorEditViewController: UIViewController {
         red.value = Float(color.red) / 255
         green.value = Float(color.green) / 255
         blue.value = Float(color.blue) / 255
+        red.tintColor = .red
+        green.tintColor = .green
+        blue.tintColor = .blue
         alphaChanger.maximumValue = 1.0; alphaChanger.minimumValue = 0.0
         alphaChanger.value = 1.0
         alphaChanger.stepValue = 0.1
+        alphaView.text = "\(alphaChanger.value)"
         
         if currentColorName.text == "Black" {
+            currentColorName.textColor = .white
+            alphaView.textColor = .white
+        } else {
+            currentColorName.textColor = .black
+            alphaView.textColor = .black
+        }
+    }
+    
+    func turnTextWhite() {
+        if UIColor(red: CGFloat(red.value), green: CGFloat(green.value), blue: CGFloat(blue.value), alpha: CGFloat(alphaChanger.value)) == UIColor(red: 0, green: 0, blue: 0, alpha: CGFloat(alphaChanger.value)) {
             currentColorName.textColor = .white
             alphaView.textColor = .white
         } else {
@@ -48,16 +62,21 @@ class CrayonColorEditViewController: UIViewController {
         switch sender {
         case red:
             view.backgroundColor = UIColor(red: CGFloat(sender.value), green: CGFloat(green.value), blue: CGFloat(blue.value), alpha: 1)
+            turnTextWhite()
         case green:
             view.backgroundColor = UIColor(red: CGFloat(red.value), green: CGFloat(sender.value), blue: CGFloat(blue.value), alpha: 1)
+            turnTextWhite()
         case blue:
             view.backgroundColor = UIColor(red: CGFloat(red.value), green: CGFloat(green.value), blue: CGFloat(sender.value), alpha: 1)
+            turnTextWhite()
         default:
             view.backgroundColor = UIColor(red: CGFloat(sender.value), green: CGFloat(green.value), blue: CGFloat(blue.value), alpha: 1)
+            turnTextWhite()
         }
     }
     
     @IBAction func alphaColorChange(_ sender: UIStepper) {
         view.backgroundColor = UIColor(red: CGFloat(red.value), green: CGFloat(green.value), blue: CGFloat(blue.value), alpha: CGFloat(alphaChanger.value))
+        alphaView.text = "\(Double(round(100 * alphaChanger.value) / 100))"
     }
 }

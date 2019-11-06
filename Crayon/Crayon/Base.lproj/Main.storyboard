@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t9G-Pd-u4z">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,22 +12,22 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Crayon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CSs-jK-emu">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ColorX" rowHeight="96" id="gcr-Aj-svi" customClass="CrayonTableViewCell" customModule="Crayon" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="96"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ColorX" rowHeight="96" id="gcr-Aj-svi" customClass="CrayonTableViewCell" customModule="Crayon" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gcr-Aj-svi" id="VGk-R1-af6">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="96"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLl-ya-AzN">
-                                                    <rect key="frame" x="15" y="65.5" width="374" height="19.5"/>
+                                                    <rect key="frame" x="20" y="65.666666666666671" width="374" height="19.333333333333329"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="374" id="kgv-Mr-pQu"/>
                                                         <constraint firstAttribute="width" secondItem="BLl-ya-AzN" secondAttribute="height" multiplier="374:21" id="l1b-do-4OO"/>
@@ -37,7 +37,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1H-oT-qbf">
-                                                    <rect key="frame" x="15" y="11" width="360" height="21"/>
+                                                    <rect key="frame" x="15" y="11" width="368" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="360" id="3Fg-I9-GcE"/>
                                                         <constraint firstAttribute="height" constant="21" id="IVz-Ws-Edm"/>
@@ -61,7 +61,7 @@
                                             <outlet property="colorHexCode" destination="BLl-ya-AzN" id="By6-6d-CAy"/>
                                             <outlet property="colorName" destination="h1H-oT-qbf" id="hih-MH-hue"/>
                                             <outlet property="colorX" destination="VGk-R1-af6" id="NVD-6k-INk"/>
-                                            <segue destination="0Pm-ES-rGE" kind="show" identifier="ColorEditor" id="qYl-ua-LEc"/>
+                                            <segue destination="0Pm-ES-rGE" kind="show" identifier="ColorEditor" id="Gcz-VF-b8b"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -76,48 +76,49 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="hjX-5K-gcQ"/>
                     <connections>
                         <outlet property="tableView" destination="CSs-jK-emu" id="uXk-9h-Dpb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135.19999999999999" y="114.69265367316342"/>
+            <point key="canvasLocation" x="1044.9275362318842" y="114.50892857142857"/>
         </scene>
         <!--Crayon Color Edit View Controller-->
         <scene sceneID="N5Q-Uu-RJp">
             <objects>
                 <viewController id="0Pm-ES-rGE" customClass="CrayonColorEditViewController" customModule="Crayon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OWN-r5-top">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNN-W6-cdi">
-                                <rect key="frame" x="16" y="53" width="343" height="53"/>
+                                <rect key="frame" x="16" y="141" width="343" height="180"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="rEv-o0-VyM">
-                                <rect key="frame" x="14" y="200" width="347" height="31"/>
+                                <rect key="frame" x="14" y="415" width="347" height="31"/>
                                 <connections>
                                     <action selector="changeBackgroundColor:" destination="0Pm-ES-rGE" eventType="valueChanged" id="ljH-jK-nmo"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="RJ9-Tu-3dC">
-                                <rect key="frame" x="14" y="276" width="347" height="31"/>
+                                <rect key="frame" x="14" y="491" width="347" height="31"/>
                                 <connections>
                                     <action selector="changeBackgroundColor:" destination="0Pm-ES-rGE" eventType="valueChanged" id="N9O-d7-kPR"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Aa0-uJ-HWH">
-                                <rect key="frame" x="14" y="357" width="347" height="31"/>
+                                <rect key="frame" x="14" y="572" width="347" height="31"/>
                                 <connections>
                                     <action selector="changeBackgroundColor:" destination="0Pm-ES-rGE" eventType="valueChanged" id="l3O-tC-OtH"/>
                                 </connections>
                             </slider>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="LhB-oD-zeX">
-                                <rect key="frame" x="140" y="454" width="94" height="32"/>
+                                <rect key="frame" x="140" y="669" width="94" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="94" id="0LL-3L-8Wj"/>
                                     <constraint firstAttribute="height" constant="32" id="T3V-Tk-uOG"/>
@@ -127,7 +128,7 @@
                                 </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="alpha" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPz-Cb-9fe">
-                                <rect key="frame" x="140" y="410" width="94" height="36"/>
+                                <rect key="frame" x="140" y="625" width="94" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="Cjq-f6-cR1"/>
                                     <constraint firstAttribute="width" constant="94" id="qnp-W3-57R"/>
@@ -178,7 +179,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nB9-Kg-ykR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="967.20000000000005" y="111.99400299850076"/>
+            <point key="canvasLocation" x="1876.8115942028987" y="111.83035714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rex-xU-fYw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="t9G-Pd-u4z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1cM-cW-hfy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YPa-e4-kK8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BH2-At-oGX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134.78260869565219" y="114.50892857142857"/>
         </scene>
     </scenes>
 </document>

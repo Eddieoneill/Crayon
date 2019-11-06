@@ -42,25 +42,21 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(130)
+        return CGFloat(90)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        // Get the new view controller using segue.destination
-//        switch segue.identifier! {
-//        case "GOTDetailSegue1":
-//            if let destination = segue.destination as? GOTDetailViewController {
-//                destination.episode = gotEpisodes[tableView.indexPathForSelectedRow!.row]
-//            }
-//        case "GOTDetailSegue2":
-//            if let destination = segue.destination as? GOTDetailViewController {
-//                destination.episode = gotEpisodes[tableView.indexPathForSelectedRow!.row]
-//            }
-//        default:
-//            fatalError()
-//        }
-//        // Pass the selected object to the new view controller.
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        switch segue.identifier! {
+        case "ColorEditor":
+            if let destination = segue.destination as? CrayonColorEditViewController {
+                destination.color = colorList[tableView.indexPathForSelectedRow!.row]
+            }
+        default:
+            fatalError()
+        }
+
+    }
     
 }
 
